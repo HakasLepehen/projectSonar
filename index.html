@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Сонар</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="src/js/script.js"></script>
+</head>
+
+<body>
+<section class="top ">
+    <nav class="navbar navbar-expand-md navbar-dark navbar-static-top bg-dark fixed-top">
+        <div class=" container">
+            <button class="btn btn-outline-success " type="button ">
+                <a class="active " href="index.html ">Домой</a>
+            </button>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="button ">
+                <a href="news.html">Режим редактирования</a>
+            </button>
+        </div>
+    </nav>
+</section>
+<section class="middle">
+    <div class="container ">
+        <div class="sonar ">
+            <h1>Сонар Тахография</h1>
+        </div>
+        <div>
+            <table class="table ">
+                <tr>
+                    <th>Модель тахографа:</th>
+                    <th>Тахограф КАСБИ DT-20M</th>
+                </tr>
+                <tr>
+                    <td>Модель автомобиля:</td>
+                    <td><select onchange="OnSelectionChange(this) " id="list ">
+                        <option selected="selected ">Выберите модель автомобиля</option>
+                        <option>ГАЗ(САЗ)</option>
+                        <option>ГАЗель до 2002 года</option>
+                        <option>ГАЗель NEXT</option>
+                        <option>ГАЗ-3310 Валдай</option>
+                        <option>ЗИЛ (вариант с спидометром диаметра 100 мм)</option>
+                        <option>ЗИЛ 131</option>
+                        <option>КАМАЗ до 2010 года</option>
+                        <option>КАМАЗ c 2010 года</option>
+                        <option>КРАЗ</option>
+                        <option>ЛАЗ</option>
+                        <option>ЛиАЗ до 2007 года</option>
+                        <option>ЛиАЗ с 2007 года</option>
+                        <option>МАЗ до 2006 года</option>
+                        <option>МАЗ с 2006 года</option>
+                        <option>НЕФАЗ</option>
+                        <option>ПАЗ до 2000 года</option>
+                        <option>ПАЗ до 2012 года</option>
+                        <option>ПАЗ с 2012 года</option>
+                        <option>ТАТА</option>
+                        <option>УАЗ</option>
+                        <option>УРАЛ</option>
+                        <option>УРАЛ-IVECO</option>
+                        <option>FIAT Ducato</option>
+                        <option>FORD Transit (с передним приводом)</option>
+                        <option>FORD Transit (с задним приводом)</option>
+                        <option>FOTON</option>
+                        <option>HEIGER</option>
+                        <option>HINO</option>
+                        <option>HYUNDAI HD</option>
+                        <option>HYUNDAI Universe</option>
+                        <option>HYUNDAI Юниверсал</option>
+                        <option>HYUNDAI Bogdan</option>
+                        <option>HYUNDAI Aero Town</option>
+                        <option>ISUZU NQR до 2010 года</option>
+                        <option>ISUZU NQR с 2010 года</option>
+                        <option>ISUZU Bogdan</option>
+                        <option>ISUZU НМ</option>
+                        <option>MERCEDES Sprinter</option>
+                        <option>MITSUBISHI Fuso Canter до 2011 года</option>
+                        <option>MITSUBISHI Fuso Canter 2012 года</option>
+                        <option>MITSUBISHI Fuso Canter c 2013 года</option>
+                        <option>PEUGEOT Boxer</option>
+                        <option>TOYOTA Heise</option>
+                        <option>KING LONG</option>
+                        <option>IVECO DAILY</option>
+                        <option>RENAULT Master</option>
+                        <option>TATRA</option>
+                        <option>VOLKSWAGEN Crafter</option>
+                        <option>VOLKSWAGEN Т5</option>
+                    </select></td>
+                </tr>
+            </table>
+        </div>
+        <!-- <div class="ButtonSubmit ">
+            <form action="submit " method="get ">
+                <button class="button-Submit " type="submit ">Показать список работ</button>
+            </form>
+        </div>
+        <div class="Reset ">
+            <form action="Reset ">
+                <button class="button-Reset " type="reset ">Очистить</button>
+            </form>
+        </div> -->
+</div>
+</section>
+<section class="result-section ">
+    <div class="container ">
+        <div class="works">
+            <h2>
+                Для установки тахографа потребуется произвести следующие работы:
+            </h2>
+        </div>
+        <div class="worksTable" id="wTable"></div>
+        <div id="wTable1 "></div>
+    </div>
+</section>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js "
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN "
+        crossorigin="anonymous "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js "
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q "
+        crossorigin="anonymous "></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js "
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
+        crossorigin="anonymous "></script>
+</body>
+</html>
