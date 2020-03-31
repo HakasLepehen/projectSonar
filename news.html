@@ -35,17 +35,17 @@
         <div class="row">
             <div class="col-12 col-md-8 col-lg-8">
                 <div class="listCars ">
-                        <select class="node w-100" size="10" >
-                            <option>ГАЗ(САЗ)</option>
-                            <option>ГАЗель до 2002 года</option>
-                        </select>
+                    <select size="10" id="carList">
+                        <option>ГАЗ(САЗ)</option>
+                        <option>ГАЗель до 2002 года</option>
+                    </select>
                 </div>
             </div>
 
             <div class="col-12 col-md-4 col-lg-4">
                 <div class="row">
                     <div class="btn">
-                        <button class="btn btn-outline btnAdd" type="button " onclick="addAuto()">
+                        <button class="btnAdd" type="button">
                             Добавить автомобиль
                         </button>
                     </div>
@@ -54,21 +54,21 @@
                 </div>
                 <div class="row">
                     <div class="btn">
-                        <button class="btn btn-outline btnEdit" type="button " onclick="">
+                        <button class="btnEdit" type="button " onclick="">
                             Редактировать список работ
                         </button>
                     </div>
                 </div>
                 <div class="row">
                     <div class="btn">
-                        <button class="btn btn-outline btnDelete" type="button ">
+                        <button class="btnDelete" type="button ">
                             Удалить автомобиль
                         </button>
                     </div>
                 </div>
                 <div class="row">
                     <div class="btn">
-                        <button class="btn btn-outline btnAddWork" type="button ">
+                        <button class="btnAddWork" type="button ">
                             Добавить вид работ
                         </button>
                     </div>
@@ -87,6 +87,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js "
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
         crossorigin="anonymous "></script>
+<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-database.js"></script>
 </body>
 
 
